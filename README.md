@@ -49,7 +49,15 @@ In PlatformIO, run:
 pio run
 ```
 
-### Step 4: Upload to ATtiny85
+### Step 4: Set ATtiny85 fuses (8Mhz internal clock)
+Connect your USBasp programmer and set fuses:
+```bash
+L:0xE2
+H:0xDD
+E:0xFF
+```
+
+### Step 5: Upload to ATtiny85
 Connect your USBasp programmer and run:
 ```bash
 pio run -t upload
